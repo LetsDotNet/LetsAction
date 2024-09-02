@@ -9,7 +9,7 @@ on:
 
 jobs:
   call-reusable-workflow:
-    uses: ./.github/workflows/03-dotnet-original-caller.yml
+    uses: ./.github/workflows/02-dotnet-reusable.yml
     with:
       dotnet-version: '8.0.x'
       run-tests: 'true'
