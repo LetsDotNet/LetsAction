@@ -1,0 +1,17 @@
+name: 03 - .NET Original that calls Reusable Workflow
+
+on:
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  call-reusable-workflow:
+    uses: ./.github/workflows/03-dotnet-original-caller.yml
+    with:
+      dotnet-version: '8.0.x'
+      run-tests: 'true'
+    secrets:
+      MY_SECRET: ${{ secrets.MY_SECRET }}

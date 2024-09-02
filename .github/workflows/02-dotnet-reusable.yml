@@ -1,0 +1,62 @@
+name: 02 - Reusable .NET Workflow with Caching
+
+on:
+  workflow_call:
+    inputs:
+      dotnet-version:
+        description: 'Version of .NET to use'
+        required: true
+        type: string
+        default: '8.0.x'
+      run-tests:
+        description: 'Whether to run tests'
+        required: true
+        type: string
+        default: 'true'
+    secrets:
+      MY_SECRET:
+        required: true
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ inputs.dotnet-version }}
+
+    - name: Cache NuGet packages
+      uses: actions/cache@v4
+      with:
+        path: ~/.nuget/packages
+        key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+        restore-keys: |
+          ${{ runner.os }}-nuget-
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      id: build
+      run: |
+        if dotnet build --no-restore; then
+          echo "build-status=success" >> $GITHUB_OUTPUT
+        else
+          echo "build-status=failed" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+
+    - name: Print build status
+      run: echo "Build status from previous step is ${{ steps.build.outputs.build-status }}"
+
+    - name: Test
+      if: ${{ inputs.run-tests == 'true' }}
+      run: dotnet test
+
+    - name: Use secret
+      run: echo "Using secret ${{ secrets.MY_SECRET }}"

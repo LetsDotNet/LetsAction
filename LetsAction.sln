@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsAction.API", "LetsAction.API\LetsAction.API.csproj", "{636784FD-4E72-4219-AAD7-4418B6B47DD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LetsAction.Test", "LetsAction.Test\LetsAction.Test.csproj", "{CC14769D-35CE-4F04-8340-A37517773271}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{636784FD-4E72-4219-AAD7-4418B6B47DD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{636784FD-4E72-4219-AAD7-4418B6B47DD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{636784FD-4E72-4219-AAD7-4418B6B47DD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{636784FD-4E72-4219-AAD7-4418B6B47DD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC14769D-35CE-4F04-8340-A37517773271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC14769D-35CE-4F04-8340-A37517773271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC14769D-35CE-4F04-8340-A37517773271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC14769D-35CE-4F04-8340-A37517773271}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
