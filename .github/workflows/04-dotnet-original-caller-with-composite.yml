@@ -1,4 +1,4 @@
-name: 02 - Reusable .NET Workflow with Caching
+name: 04 - Reusable .NET Workflow with Caching
 
 on:
   workflow_call:
