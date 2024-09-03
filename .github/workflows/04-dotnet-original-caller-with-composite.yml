@@ -1,0 +1,29 @@
+name: 02 - Reusable .NET Workflow with Caching
+
+on:
+  workflow_call:
+    inputs:
+      dotnet-version:
+        description: 'Version of .NET to use'
+        required: true
+        type: string
+        default: '8.0.x'
+      run-tests:
+        description: 'Whether to run tests'
+        required: true
+        type: string
+        default: 'true'
+    secrets:
+      MY_SECRET:
+        required: true
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Build and Test .NET Project
+      uses: ./.github/actions/build_and_test
+      with:
+        dotnet-version: ${{ inputs.dotnet-version }}
+        run-tests: ${{ inputs.run-tests }}
