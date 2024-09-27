@@ -1,4 +1,4 @@
-name: 'Echo Steps'
+name: 'Echo Steps - Composite with Composite'
 description: 'A composite action to echo steps 1 to 10'
 inputs: {}
 outputs: {}
@@ -7,30 +7,40 @@ runs:
   steps:
     - name: Step 1
       run: echo "step 1"
+      shell: bash
 
     - name: Step 2
       run: echo "step 2"
+      shell: bash
 
     - name: Step 3
       run: echo "step 3"
+      shell: bash
 
     - name: Step 4
       run: echo "step 4"
+      shell: bash
 
     - name: Step 5
       run: echo "step 5"
+      shell: bash
 
     - name: Step 6
       run: echo "step 6"
+      shell: bash
 
     - name: Step 7
       run: echo "step 7"
+      shell: bash
 
     - name: Step 8
       run: echo "step 8"
+      shell: bash
 
     - name: Step 9
       run: echo "step 9"
+      shell: bash
 
     - name: Step 10
       run: echo "step 10"
+      shell: bash
