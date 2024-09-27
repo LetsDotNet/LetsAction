@@ -1,4 +1,4 @@
-name: Echo Steps
+name: Echo Steps - Original
 
 on: workflow_dispatch
 

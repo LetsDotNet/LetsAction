@@ -1,4 +1,4 @@
-name: Echo Steps
+name: Echo Steps - Composite with Composite
 
 on: workflow_dispatch   
 
