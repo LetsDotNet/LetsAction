@@ -1,0 +1,13 @@
+name: Echo Steps
+
+on: workflow_dispatch   
+
+jobs:
+  echo-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Echo Steps
+        uses: ./.github/actions/echo_steps

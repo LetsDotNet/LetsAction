@@ -1,0 +1,40 @@
+name: Echo Steps
+
+on: workflow_dispatch
+
+jobs:
+  echo-steps:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Step 1
+        run: echo "step 1"
+
+      - name: Step 2
+        run: echo "step 2"
+
+      - name: Step 3
+        run: echo "step 3"
+
+      - name: Step 4
+        run: echo "step 4"
+
+      - name: Step 5
+        run: echo "step 5"
+
+      - name: Step 6
+        run: echo "step 6"
+
+      - name: Step 7
+        run: echo "step 7"
+
+      - name: Step 8
+        run: echo "step 8"
+
+      - name: Step 9
+        run: echo "step 9"
+
+      - name: Step 10
+        run: echo "step 10"
